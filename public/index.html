@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Glass Quote</title>
+    <script defer src="script.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        select, button { width: 100%; margin: 10px 0; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="car-section">
+        <h2>Select Your Car</h2>
+        <select id="make" onchange="loadModels()"></select>
+        <select id="model"></select>
+        <select id="year"></select>
+        <select id="type">
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+        </select>
+        <button onclick="selectCar()">Next</button>
+    </div>
+
+    <div id="glass-section" style="display: none;">
+        <h2>Select Glass Type</h2>
+        <select id="glass"></select>
+        <button onclick="selectGlass()">Next</button>
+    </div>
+
+    <div id="vendor-section" style="display: none;">
+        <h2>Select Vendor</h2>
+        <select id="vendor"></select>
+        <button onclick="requestQuote()">Get Quote</button>
+    </div>
+
+    <div id="quote-section" style="display: none;">
+        <h2>Quote Details</h2>
+        <p id="quote-result"></p>
+    </div>
+</body>
+</html>
